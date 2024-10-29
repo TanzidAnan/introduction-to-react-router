@@ -11,6 +11,7 @@ import ErorPage from './ErorPage.jsx';
 import Home from './Compontent/Home/Home.jsx';
 import About from './Compontent/About/About.jsx';
 import Content from './Compontent/Content/Content.jsx';
+import Users from './Compontent/Users/Users.jsx';
 
 
 const router = createBrowserRouter([
@@ -18,14 +19,19 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home></Home>,
     errorElement: <ErorPage></ErorPage>,
-    children : [
+    children: [
       {
-        path : "/about",
+        path: "/about",
         element: <About></About>
       },
       {
-        path:"/content",
-        element:<Content></Content>
+        path:'/user',
+        loader:() =>fetch('https://jsonplaceholder.typicode.com/users'),
+        element:<Users></Users>
+      },
+      {
+        path: "/content",
+        element: <Content></Content>
       }
     ]
   },
