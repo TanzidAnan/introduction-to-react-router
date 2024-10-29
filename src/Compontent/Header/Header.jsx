@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <div>
             <h1>Navber</h1>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/content">Content</a></li>
+            <ul className="flex justify-between gap-24">
+                <Link className="ml-5 mr-6" to="/">Home</Link>
+                <Link className="ml-5 mr-6" to="/about">About</Link>
+                <Link className="ml-5 mr-6" to="/content">Content</Link>
             </ul>
         </div>
     );
