@@ -9,7 +9,7 @@ const User = ({user}) => {
             <h3>{name}</h3>
             <p>Email: {email}</p>
             <p>Phone: {phone}</p> 
-            <button><Link className="btn bg-gray-600 px-4 py-1" to={`/usre/:${id}`}>Details</Link></button>
+            <button><Link className="btn bg-gray-600 px-4 py-1" to={`/usres/${id}`}>Details</Link></button>
         </div>
     );
 };
