@@ -7,7 +7,7 @@ const Users = () => {
         <div>
             <h1 className="text-2xl font-semibold">Users {users.length}</h1>
             <h1></h1>
-            <div>
+            <div className="grid grid-cols-3 gap-9 mt-5">
                 {
                     users.map((user,idx) =><User key={idx} user={user}></User>)
                 }
