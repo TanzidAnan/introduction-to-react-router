@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+
 import { Link } from 'react-router-dom';
 
 const Post = ({post}) => {
@@ -7,7 +8,7 @@ const Post = ({post}) => {
     return (
         <div className='bg-stone-400 gap-8 text-black text-center px-3 rounded-lg shadow-lg py-4'>
             <div className='flex flex-col'>
-                <h1 className='text-2xl font-bold'>{title}</h1>
+                <h1 className='text-2xl font-bold text-gray-800'>{title}</h1>
                 <p>{body}</p>
             </div>
             <div className='flex-wrap'>
