@@ -1,10 +1,14 @@
 /* eslint-disable react/prop-types */
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Post = ({post}) => {
-    const {body,title,id} =post
-    console.log(post)
+    const {body,title,id} =post;
+    const naveget =useNavigate()
+    // console.log(post)
+    const handleDetails =() =>{
+        naveget(`/posts/${id}`)
+    }
     return (
         <div className='bg-stone-400 gap-8 text-black text-center px-3 rounded-lg shadow-lg py-4'>
             <div className='flex flex-col'>
