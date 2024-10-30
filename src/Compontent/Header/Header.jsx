@@ -11,6 +11,7 @@ const Header = () => {
                     <ul className="menu menu-horizontal px-1 font-bold">
                         <Link to='/'><li><a>Home</a></li></Link>
                         <Link to='/about'><li><a>About</a></li></Link>
+                        <Link to='/users'><li><a>Users</a></li></Link>
                         <Link to='/content'><li><a>Content</a></li></Link>
                     </ul>
                 </div>
