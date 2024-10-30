@@ -11,7 +11,7 @@ const User = ({user}) => {
             </div>
             <div className="flex justify-between mx-7">
                 <div >
-                    <Link to={`/user/${id}`}><button className="btn bg-red-400 border-none text-black">Data Add</button></Link>
+                    <Link to={`/user/${id}`}><button className="btn bg-red-200 border-none text-black">Data Add</button></Link>
                 </div>
                 <div>
                     <button className="btn bg-slate-100">Click Add</button>
