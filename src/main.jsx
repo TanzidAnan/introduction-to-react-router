@@ -12,32 +12,44 @@ import About from './Compontent/About/About.jsx';
 import Content from './Compontent/Content/Content.jsx';
 import Users from './Compontent/Users/Users.jsx';
 import UserDetles from './Compontent/UserDetles/UserDetles.jsx';
+import Posts from './Compontent/Posts/Posts.jsx';
+import PostDetles from './Compontent/PostDetles/PostDetles.jsx';
 // import Header from './Compontent/Header.jsx';
 
 
-const router =createBrowserRouter ([
+const router = createBrowserRouter([
   {
-    path:'/',
-    errorElement:<ErrorPage></ErrorPage>,
-    element:<Home></Home>,
-    children:[
+    path: '/',
+    errorElement: <ErrorPage></ErrorPage>,
+    element: <Home></Home>,
+    children: [
       {
-        path:'/about',
-        element:<About></About>
+        path: '/about',
+        element: <About></About>
       },
       {
-        path:'/content',
-        element:<Content></Content>
+        path: '/content',
+        element: <Content></Content>
       },
       {
-        path:'/users',
-        loader:() => fetch('https://jsonplaceholder.typicode.com/users'),
-        element:<Users></Users>
+        path: '/users',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+        element: <Users></Users>
       },
       {
-        path:'/user/:userId',
-        loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
-        element:<UserDetles></UserDetles>
+        path: '/user/:userId',
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        element: <UserDetles></UserDetles>
+      },
+      {
+        path: '/posts',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/posts'),
+        element: <Posts></Posts>
+      },
+      {
+        path:'/posts/:postId',
+        loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        element:<PostDetles></PostDetles>
       }
     ]
   },
