@@ -9,6 +9,7 @@ import {
 import ErrorPage from './Compontent/ErrorPage/ErrorPage';
 import Home from './Compontent/Home/Home.jsx';
 import About from './Compontent/About/About.jsx';
+import Content from './Compontent/Content/Content.jsx';
 // import Header from './Compontent/Header.jsx';
 
 
@@ -21,6 +22,10 @@ const router =createBrowserRouter ([
       {
         path:'/about',
         element:<About></About>
+      },
+      {
+        path:'/content',
+        element:<Content></Content>
       }
     ]
   },
