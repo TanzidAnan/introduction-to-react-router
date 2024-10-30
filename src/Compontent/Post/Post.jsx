@@ -17,6 +17,7 @@ const Post = ({post}) => {
             </div>
             <div className='flex-wrap'>
                 <Link className='flex-wrap' to={`/posts/${id}`}><button className='btn'>Click Me</button></Link>
+                <button className='btn' onClick={handleDetails} >See Details</button>
             </div>
         </div>
     );
